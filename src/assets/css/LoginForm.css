@@ -1,0 +1,10 @@
+.form-button {
+  background: #0d28a6;
+  height: 36px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.form-label {
+  font-weight: 300;
+}
