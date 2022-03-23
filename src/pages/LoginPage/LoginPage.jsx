@@ -3,6 +3,7 @@ import { Form, Button, Alert } from "react-bootstrap";
 import { FormInput } from "../../assets/components/FormInput/FormInput";
 import "./LoginPage.scss";
 import JumbotronImage from "../../assets/img/jumbotron.png";
+import LoginData from "./login-data.json";
 
 export default class LoginPage extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ export default class LoginPage extends Component {
     email: "",
     password: "",
     error: "",
+    status: "",
   };
 
   handleEmailInput(e) {
@@ -32,15 +34,26 @@ export default class LoginPage extends Component {
   }
 
   handleLogin() {
-    if (this.state.email === "" || this.state.password === "") {
+    const EMAIL_VALIDATION = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi;
+
+    // input validation
+    if (
+      this.state.email === "" ||
+      this.state.password === "" ||
+      !EMAIL_VALIDATION.test(this.state.email) ||
+      this.state.password.length < 6
+    ) {
       this.setState({
-        error:
-          "Masukkan username dan password yang benar. Perhatikan penggunaan huruf kapital.",
+        info: "Masukkan username dan password yang benar. Perhatikan penggunaan huruf kapital.",
+        status: "danger",
       });
       return;
     }
 
-    console.log("Login Berhasil...");
+    this.setState({
+      info: "Login Berhasil.",
+      status: "success",
+    });
   }
 
   render() {
@@ -52,8 +65,8 @@ export default class LoginPage extends Component {
         <div className="main-section">
           <div className="title-logo"></div>
           <h3 className="title">Welcome, Admin BCR</h3>
-          <Alert show={this.state.error !== ""} variant="danger">
-            <p>{this.state.error}</p>
+          <Alert show={this.state.status !== ""} variant={this.state.status}>
+            <p>{this.state.info}</p>
           </Alert>
           <Form className="login-form">
             <FormInput
