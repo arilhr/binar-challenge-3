@@ -5,8 +5,8 @@ import { SearchBar } from "../SearchBar/SearchBar";
 
 export const NavbarDefault = () => {
   return (
-    <Navbar>
-      <Container>
+    <Navbar fixed="top">
+      <Container fluid>
         <Navbar.Brand href="/">BCR</Navbar.Brand>
         <SearchBar />
       </Container>
