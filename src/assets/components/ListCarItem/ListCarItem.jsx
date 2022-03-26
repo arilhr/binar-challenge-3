@@ -14,6 +14,8 @@ export const ListCarItem = ({
   start,
   finish,
   lastUpdate,
+  onDelete,
+  onEdit,
 }) => {
   const convertToRupiah = (number) => {
     const format = number.toString().split("").reverse().join("");
@@ -40,11 +42,11 @@ export const ListCarItem = ({
           <p className="text">{lastUpdate}</p>
         </div>
         <div className="button-group">
-          <Button variant="outline-danger">
+          <Button variant="outline-danger" onClick={onDelete}>
             <DeleteIcon />
             Delete
           </Button>
-          <Button variant="success">
+          <Button variant="success" onClick={onEdit}>
             <EditIcon />
             Edit
           </Button>

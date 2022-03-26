@@ -1,0 +1,102 @@
+[
+    {
+      "id": 0,
+      "name": "Avanza",
+      "category": "Small",
+      "price": "Rp 500.000",
+      "startRent": "2021/12/15",
+      "finishRent": "2021/12/21",
+      "createAt": "2021/11/07",
+      "updateAt": "2021/11/29"
+    },
+    {
+      "id": 1,
+      "name": "Alphard",
+      "category": "Large",
+      "price": "Rp 100.000",
+      "startRent": "2021/07/01",
+      "finishRent": "2021/07/10",
+      "createAt": "2021/05/20",
+      "updateAt": "2021/06/27"
+    },
+    {
+      "id": 2,
+      "name": "Alphard",
+      "category": "Small",
+      "price": "Rp 800.000",
+      "startRent": "2021/11/28",
+      "finishRent": "2021/12/17",
+      "createAt": "2021/10/28",
+      "updateAt": "2021/11/24"
+    },
+    {
+      "id": 3,
+      "name": "Innova",
+      "category": "Large",
+      "price": "Rp 700.000",
+      "startRent": "2021/10/04",
+      "finishRent": "2021/10/12",
+      "createAt": "2021/09/01",
+      "updateAt": "2021/09/27"
+    },
+    {
+      "id": 4,
+      "name": "Alphard",
+      "category": "Large",
+      "price": "Rp 600.000",
+      "startRent": "2021/05/01",
+      "finishRent": "2021/05/12",
+      "createAt": "2021/03/22",
+      "updateAt": "2021/04/20"
+    },
+    {
+      "id": 5,
+      "name": "Innova",
+      "category": "Medium",
+      "price": "Rp 100.000",
+      "startRent": "2020/09/03",
+      "finishRent": "2020/09/15",
+      "createAt": "2020/07/24",
+      "updateAt": "2020/08/28"
+    },
+    {
+      "id": 6,
+      "name": "Innova",
+      "category": "Small",
+      "price": "Rp 100.000",
+      "startRent": "2021/12/27",
+      "finishRent": "2021/12/31",
+      "createAt": "2021/11/24",
+      "updateAt": "2021/12/07"
+    },
+    {
+      "id": 7,
+      "name": "Alphard",
+      "category": "Large",
+      "price": "Rp 100.000",
+      "startRent": "2021/02/25",
+      "finishRent": "2021/03/05",
+      "createAt": "2021/01/12",
+      "updateAt": "2021/02/24"
+    },
+    {
+      "id": 8,
+      "name": "Xpander",
+      "category": "Medium",
+      "price": "Rp 400.000",
+      "startRent": "2021/03/28",
+      "finishRent": "2021/04/05",
+      "createAt": "2021/02/24",
+      "updateAt": "2021/03/16"
+    },
+    {
+      "id": 9,
+      "name": "Alphard",
+      "category": "Large",
+      "price": "Rp 500.000",
+      "startRent": "2020/06/22",
+      "finishRent": "2020/07/02",
+      "createAt": "2020/05/14",
+      "updateAt": "2020/06/20"
+    }
+  ]

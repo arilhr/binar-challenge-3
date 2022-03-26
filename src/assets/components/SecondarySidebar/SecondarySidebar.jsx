@@ -8,8 +8,13 @@ export const SecondarySidebar = ({ titlePage, items }) => {
       <div className="item-group">
         {items.map((item) => {
           return (
-            <button key={item} className="button-sidebar">
-              {item}
+            <button
+              key={item.label}
+              className={
+                item.active ? "button-sidebar active" : "button-sidebar"
+              }
+            >
+              {item.label}
             </button>
           );
         })}

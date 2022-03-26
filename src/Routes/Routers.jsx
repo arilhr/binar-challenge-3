@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { DashboardPage } from "../pages/DashboardPage/DashboardPage";
-import LoginPage from "../pages/LoginPage/LoginPage";
+import { LoginPage } from "../pages/LoginPage/LoginPage";
 import TestPage from "../pages/TestPage/TestPage";
 
 export const Routers = () => {

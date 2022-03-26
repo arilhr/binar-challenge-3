@@ -1,24 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SideNavbar.scss";
-import HouseIcon from "../../img/fi_home.svg";
-import TruckIcon from "../../img/fi_truck.svg";
+import { useNavigate } from "react-router-dom";
 
-export const SideNavbar = () => {
+export const SideNavbar = ({ items, activeItem }) => {
+
   return (
     <div className="sidebar">
       <div className="logo">
         <div className="logo-image"></div>
       </div>
-      <SideNavbarItem icon={HouseIcon} text={"Dashboard"} />
-      <SideNavbarItem icon={TruckIcon} text={"Cars"} />
+      {items.map((item, index) => {
+        return (
+          <SideNavbarItem
+            key={`${item.text} ${index}`}
+            icon={item.icon}
+            text={item.text}
+            link={item.link}
+            active={activeItem === index}
+          />
+        );
+      })}
     </div>
   );
 };
 
-const SideNavbarItem = ({ icon, text, status }) => {
+const SideNavbarItem = ({ icon, text, active, link, handleClick }) => {
+  let navigate = useNavigate();
   return (
-    <button className={status ? "sidebar-item active" : "sidebar-item"}>
-      <img src={icon} alt="House" />
+    <button
+      className={active ? "sidebar-item active" : "sidebar-item"}
+      onClick={() => {
+        navigate(link);
+      }}
+    >
+      <img src={icon} alt={text} />
       <span className={"button-text"}>{text}</span>
     </button>
   );

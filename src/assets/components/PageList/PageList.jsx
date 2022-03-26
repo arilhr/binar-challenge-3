@@ -22,11 +22,11 @@ export const PageList = ({ title, header, datas, keys }) => {
   };
 
   const changeLimitPage = (e) => {
-    setPostPerPage(e.target.value);
+    setPostPerPage(parseInt(e.target.value));
   };
 
   const changePage = (e) => {
-    setCurrentPage(e.target.value);
+    setCurrentPage(parseInt(e.target.value));
   };
 
   return (
@@ -82,7 +82,7 @@ export const PageList = ({ title, header, datas, keys }) => {
             >
               {(() => {
                 let options = [];
-                for (let i = 0; i < postsPerPage; i++) {
+                for (let i = 0; i < Math.ceil(datas.length / postsPerPage); i++) {
                   options.push(
                     <option key={`jump-page-opt-${i}`} value={i}>
                       {i + 1}
