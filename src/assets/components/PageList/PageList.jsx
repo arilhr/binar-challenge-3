@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 import ReactPaginate from "react-paginate";
 import PreviousIcon from "../../img/fi_chevrons-left.svg";
 import NextIcon from "../../img/fi_chevrons-right.svg";
@@ -74,24 +74,31 @@ export const PageList = ({ title, header, datas, keys }) => {
           </div>
           <div className="dropdown">
             <div className="dropdown-title">Jump to page</div>
-            <select
-              name="jump-page"
-              className="jump-page"
-              onChange={changePage}
-              value={currentPage}
-            >
-              {(() => {
-                let options = [];
-                for (let i = 0; i < Math.ceil(datas.length / postsPerPage); i++) {
-                  options.push(
-                    <option key={`jump-page-opt-${i}`} value={i}>
-                      {i + 1}
-                    </option>
-                  );
-                }
-                return options;
-              })()}
-            </select>
+            <div className="jump-page-group">
+              <select
+                name="jump-page"
+                className="jump-page"
+                onChange={changePage}
+                value={currentPage}
+              >
+                {(() => {
+                  let options = [];
+                  for (
+                    let i = 0;
+                    i < Math.ceil(datas.length / postsPerPage);
+                    i++
+                  ) {
+                    options.push(
+                      <option key={`jump-page-opt-${i}`} value={i}>
+                        {i + 1}
+                      </option>
+                    );
+                  }
+                  return options;
+                })()}
+              </select>
+              <Button variant="primary">Go</Button>
+            </div>
           </div>
         </div>
         <ReactPaginate
