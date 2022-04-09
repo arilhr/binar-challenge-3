@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavbarDefault.scss";
-import { Container, Navbar } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { ProfileCard } from "../ProfileCard/ProfileCard";
 import { ReactComponent as HamburgerIcon } from "../../img/fi_menu.svg";

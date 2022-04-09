@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SideNavbar.scss";
 import { useNavigate } from "react-router-dom";
 
 export const SideNavbar = ({ items, activeItem }) => {
-
   return (
     <div className="sidebar">
       <div className="logo">

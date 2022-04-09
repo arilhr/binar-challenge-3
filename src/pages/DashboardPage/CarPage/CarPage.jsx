@@ -1,6 +1,5 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 import { DeleteCard } from "../../../assets/components/DeleteCard/DeleteCard";
 import { ListCarItem } from "../../../assets/components/ListCarItem/ListCarItem";
 import { SecondarySidebar } from "../../../assets/components/SecondarySidebar/SecondarySidebar";
@@ -15,11 +14,9 @@ import { NotificationCard } from "../../../assets/components/NotificationCard/No
 export const CarPage = () => {
   const [pageState, setPageState] = useState("list-car");
   const [deleteItem, setDeleteItem] = useState(false);
-  const [carDatas, setCarDatas] = useState(() => {
-    return CarData;
-  });
   const [notif, setNotif] = useState({ show: false, type: "", message: "" });
   const [carFilter, setCarFilter] = useState("all");
+  const carDatas = CarData;
 
   const handleCarFilter = (category) => {
     setCarFilter(category);

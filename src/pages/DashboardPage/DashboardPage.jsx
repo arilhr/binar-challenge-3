@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { NavbarDefault } from "../../assets/components/Navbar/NavbarDefault";
 import { SideNavbar } from "../../assets/components/SideNavbar/SideNavbar";
 import { CarPage } from "./CarPage/CarPage";
@@ -15,15 +15,15 @@ export const DashboardPage = () => {
     <div className="dashboard-page">
       <NavbarDefault />
       <div className="main-content">
-        {params.first === undefined? <DashboardMainPage /> : null}
-        {params.first === "car"? <CarPage /> : null}
+        {params.first === undefined ? <DashboardMainPage /> : null}
+        {params.first === "car" ? <CarPage /> : null}
       </div>
       <SideNavbar
         items={[
           { icon: HouseIcon, text: "Dashboard", link: "/dashboard" },
           { icon: TruckIcon, text: "Cars", link: "/dashboard/car" },
         ]}
-        activeItem={params.first === undefined? 0 : 1}
+        activeItem={params.first === undefined ? 0 : 1}
       />
     </div>
   );
